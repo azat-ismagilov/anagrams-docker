@@ -1,0 +1,3 @@
+[submodule "extern/facil.io"]
+	path = extern/facil.io
+	url = https://github.com/boazsegev/facil.io.git
