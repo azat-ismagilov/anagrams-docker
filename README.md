@@ -3,7 +3,7 @@
 Anagrams for lksh
 
 # Preview 
-https://anagram.aismagilov.ruп/
+https://anagram.aismagilov.ru/
 
 # Usage
 
