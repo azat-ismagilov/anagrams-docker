@@ -2,18 +2,32 @@
 
 Anagrams for lksh
 
-# Build
+# Preview 
+https://anagram.aismagilov.ruп/
 
-Warning: "facil" framework updated and does not work now. Use "facil.iofix" branch to build.
+# Usage
 
-To build you need the "facil" framework, please run the following command to get it:
+### docker-compose (recommended)
 
-git clone -b stable https://github.com/boazsegev/facil.io extern/facil.io
+```yaml
+---
+version: "3"
+services:
+  anagrams:
+    image: aismagilov/anagrams-docker:latest
+    container_name: anagrams
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+```
 
-Then build as usual CMake project:
+### docker cli
 
-mkdir build && cd build && cmake .. && make
+```bash
+docker run -d \
+  --name=anagrams \
+  -p 3000:3000 \
+  --restart unless-stopped \
+  aismagilov/anagrams-docker:latest
+```
 
-# Deps:
-
-cmake pkg-config build-essential libicu-dev
